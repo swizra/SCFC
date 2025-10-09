@@ -5,6 +5,10 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 *:focus,
 *:active {
@@ -19,23 +23,32 @@ textarea {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
+img {
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
 :root {
   --bg: #ffffff;
   --fg: #000000;
-  --border: #000000;
+  --border: #333;
   --muted: #666666;
   --accent: #377e39;
+  --accent-1: #ff0000;
+  --accent-2: #0066ff;
   --maxw: 1200px;
   --gutter: clamp(16px, 5vw, 40px);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #040404;
+    --bg: #251c26;
     --fg: #ffffff;
-    --border: #ffffff;
+    --border: #333;
     --muted: #999999;
     --accent: #377e39;
+    --accent-1: #ff3333;
+    --accent-2: #0088ff;
   }
 }
 
@@ -82,7 +95,7 @@ header {
   font-weight: 700;
   font-size: clamp(20px, 5vw, 24px);
   letter-spacing: -0.01em;
-  color: var(--border);
+  color: var(--fg);
   z-index: 1001;
 }
 
@@ -133,6 +146,7 @@ header {
   border: 1px solid var(--accent);
   font-family: "Inter", system-ui, sans-serif;
   transition: all 0.3s ease;
+  border-radius: 20px;
 }
 
 .btn:hover {
@@ -338,6 +352,7 @@ section p.lead {
   padding: clamp(24px, 4vw, 32px);
   position: relative;
   transition: all 0.3s ease;
+  border-radius: 8px;
 }
 
 .card:hover {
