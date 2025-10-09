@@ -33,7 +33,7 @@ img {
   --fg: #000000;
   --border: #333;
   --muted: #666666;
-  --accent: #000000;
+  --accent: #377e39;
   --accent-1: #ff0000;
   --accent-2: #0066ff;
   --maxw: 1200px;
@@ -46,7 +46,7 @@ img {
     --fg: #ffffff;
     --border: #333;
     --muted: #999999;
-    --accent: #ffffff;
+    --accent: #377e39;
     --accent-1: #ff3333;
     --accent-2: #0088ff;
   }
