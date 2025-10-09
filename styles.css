@@ -352,7 +352,7 @@ section p.lead {
   padding: clamp(24px, 4vw, 32px);
   position: relative;
   transition: all 0.3s ease;
-  border-radius: 8px;
+  border-radius: 0px 0px 0px 0px;
 }
 
 .card:hover {
