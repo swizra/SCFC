@@ -42,7 +42,7 @@ img {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #251c26;
+    --bg: #000;
     --fg: #ffffff;
     --border: #333;
     --muted: #999999;
