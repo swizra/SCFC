@@ -579,3 +579,21 @@ footer a {
   margin-top: 40px;
   margin-bottom: 20px;
 }
+
+#partners .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 480px) {
+  #contact .cta-buttons {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}
