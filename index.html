@@ -21,10 +21,22 @@
   <body>
     <header>
       <div class="container nav">
-        <a class="brand" href="https://club.soyth.ch">SCFC</a>
+        <a class="brand" href="https://club.soyth.ch" aria-label="SCFC Home">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M 70 25 L 30 25 L 30 42 L 60 42 L 60 58 L 70 58 L 70 75 L 30 75 L 30 58 L 40 58 L 40 42 L 30 42"
+              fill="none"
+              stroke="var(--accent)"
+              stroke-width="3"
+              stroke-linecap="square"
+              stroke-linejoin="miter"
+            />
+          </svg>
+          SCFC
+        </a>
         <button class="burger" id="burger" aria-label="Menu">
           <div class="burger-line"></div>
-          
+
           <div class="burger-line"></div>
         </button>
         <nav id="primary-nav" class="links" aria-label="Primary">
@@ -601,7 +613,6 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
-          <!-- Column 1: Brand & Tagline -->
           <div class="footer-brand">
             <a href="https://club.soyth.ch" class="brand-footer">SCFC</a>
             <p class="tagline">
@@ -676,10 +687,9 @@
           <div class="footer-legal">
             <p>
               &copy; <span id="year"></span>
-              Soyth Consulting & Finance Club. All
-              rights reserved.
-              We don’t use cookies or track users. Your data is only collected
-              when you voluntarily email us. To request deletion, email
+              Soyth Consulting & Finance Club. All rights reserved. We don’t use
+              cookies or track users. Your data is only collected when you
+              voluntarily email us. To request deletion, email
               <a href="mailto:hello@soyth.ch">hello@soyth.ch</a>.
             </p>
           </div>
