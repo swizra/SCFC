@@ -36,8 +36,8 @@ img {
   --border-secondary: #444;
   --muted: #666666;
   --accent: #444;
-  --accent-1: #ff0000;
-  --accent-2: #0066ff;
+  --accent-1: #444;
+  --accent-2: #444;
   --maxw: 1200px;
   --gutter: clamp(16px, 5vw, 40px);
 }
@@ -51,8 +51,8 @@ img {
     --border-secondary: #333;
     --muted: #999999;
     --accent: #ffffff;
-    --accent-1: #ff3333;
-    --accent-2: #0088ff;
+    --accent-1: #ffffff;
+    --accent-2: #ffffff;
   }
 }
 
@@ -95,15 +95,25 @@ header {
 }
 
 .brand {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-  font-weight: 600;
-  font-size: clamp(20px, 5vw, 24px);
-  letter-spacing: -0.01em;
-  color: var(--fg);
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  text-decoration: none;
+  cursor: pointer;
   z-index: 1001;
-  background-color: transparent;
+  color: var(--accent);
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 200;
+  font-size: clamp(20px, 5vw, 24px);
 }
 
+.brand svg {
+  width: clamp(40px, 6vw, 64px);
+  height: auto;
+  stroke: var(--fg);
+  fill: none;
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
 .links {
   display: flex;
   gap: 32px;
@@ -115,7 +125,7 @@ header {
 
 .links a {
   font-size: clamp(13px, 3vw, 14px);
-  font-weight: 500;
+  font-weight: 200;
   letter-spacing: 0.01em;
   position: relative;
   transition: all 0.3s ease;
@@ -134,23 +144,26 @@ header {
 }
 
 .btn {
-  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
   max-width: fit-content;
   background: var(--accent);
   color: var(--bg);
-  font-weight: 600;
+  font-weight: 200;
   font-size: clamp(13px, 3vw, 14px);
   cursor: pointer;
-  border: 1px solid var(--accent);
+  border: 0px solid var(--accent);
   font-family: "Inter", system-ui, sans-serif;
   transition: all 0.3s ease;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 .btn.secondary {
   background: transparent;
   color: var(--fg);
-  border: 1px solid var(--border-secondary);
+  border: 1px solid var(--accent);
 }
 
 .burger {
@@ -166,27 +179,27 @@ header {
 .burger-line {
   display: block;
   background: var(--accent);
-  height: 2px;
+  height: 1px;
   width: 24px;
   margin: 10px 0;
-  border-radius: 20px;
+  border-radius: 0px;
   transition: all 0.3s ease;
 }
 
 .burger.active .burger-line:nth-child(1) {
-  transform: rotate(45deg) translate(4.24px, 4.24px);
+  transform: rotate(45deg) translate(4px, 4px);
 }
 
 .burger.active .burger-line:nth-child(2) {
-  transform: rotate(-45deg) translate(4.24px, -4.24px);
+  transform: rotate(-45deg) translate(4px, -4px);
 }
 @media (max-width: 768px) {
   #primary-nav {
     position: fixed;
-    top: 82px;
+    top: 80px;
     left: 0;
     right: 0;
-    background: var(--bg-secondary);
+    background: var(--bg);
     border-bottom: 0rem solid var(--border);
     flex-direction: column;
     padding: 24px var(--gutter);
@@ -197,6 +210,7 @@ header {
 
   #primary-nav.active {
     display: flex;
+    font-size: 2rem;
   }
 
   .burger {
@@ -214,7 +228,13 @@ header {
   position: relative;
   padding: clamp(80px, 12vw, 140px) 0;
   overflow: hidden;
+  min-height: 75vh;
   background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  flex-direction: column;
 }
 
 .hero .container {
@@ -229,7 +249,7 @@ header {
   margin: 0 0 24px;
   letter-spacing: -0.02em;
   color: var(--fg);
-  font-weight: 700;
+  font-weight: 200;
 }
 
 .hero h1 span {
@@ -243,7 +263,7 @@ header {
   max-width: 700px;
   margin: 0 0 32px;
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .cta {
@@ -277,7 +297,7 @@ section h2 {
   margin: 0 0 12px;
   letter-spacing: -0.02em;
   color: var(--fg);
-  font-weight: 700;
+  font-weight: 200;
   position: relative;
 }
 
@@ -287,7 +307,7 @@ section p.lead {
   max-width: 900px;
   line-height: 1.7;
   margin-top: 32px;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .grid {
@@ -331,7 +351,7 @@ section p.lead {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: clamp(15px, 3.5vw, 16px);
   color: var(--fg);
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: -0.01em;
 }
 
@@ -340,7 +360,7 @@ section p.lead {
   color: var(--muted);
   font-size: clamp(13px, 3vw, 14px);
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .stats-grid {
@@ -362,7 +382,7 @@ section p.lead {
 .stat .number {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: clamp(28px, 6vw, 44px);
-  font-weight: 700;
+  font-weight: 200;
   margin: 0 0 8px;
   color: var(--accent);
   letter-spacing: -0.02em;
@@ -373,7 +393,7 @@ section p.lead {
   color: var(--muted);
   font-size: clamp(12px, 3vw, 13px);
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 @media (max-width: 600px) {
@@ -400,7 +420,7 @@ section p.lead {
 
 .market-item .symbol {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  font-weight: 700;
+  font-weight: 200;
   font-size: clamp(15px, 3vw, 16px);
   color: var(--fg);
 }
@@ -416,7 +436,7 @@ section p.lead {
 
 .market-item .price {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  font-weight: 700;
+  font-weight: 200;
   font-size: clamp(16px, 3.5vw, 18px);
   color: var(--fg);
 }
@@ -424,7 +444,7 @@ section p.lead {
 .market-item .change {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: clamp(12px, 3vw, 13px);
-  font-weight: 600;
+  font-weight: 200;
   margin-top: 4px;
 }
 
@@ -495,9 +515,8 @@ canvas {
 }
 
 .footer-brand .brand-footer {
-  font-family: "Space Mono", monospace;
   font-size: clamp(28px, 6vw, 36px);
-  font-weight: 700;
+  font-weight: 200;
   color: var(--accent);
   text-decoration: none;
   display: block;
@@ -507,7 +526,7 @@ canvas {
 
 .footer-brand .tagline {
   font-size: clamp(15px, 3.5vw, 17px);
-  font-weight: 600;
+  font-weight: 200;
   color: var(--accent);
   margin: 16px 0 12px;
   line-height: 1.4;
@@ -526,7 +545,7 @@ canvas {
 .footer-involved h4,
 .footer-contact h4 {
   font-size: clamp(15px, 3.5vw, 16px);
-  font-weight: 700;
+  font-weight: 200;
   color: var(--fg);
   margin: 0 0 16px;
   letter-spacing: -0.01em;
@@ -551,7 +570,7 @@ canvas {
 .footer-involved a {
   color: var(--muted);
   font-size: clamp(13px, 3vw, 14px);
-  font-weight: 500;
+  font-weight: 200;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
@@ -655,6 +674,7 @@ canvas {
 }
 
 .market-subheader {
+  font-weight: 200;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: clamp(18px, 4vw, 20px);
   margin-top: 40px;
@@ -670,7 +690,7 @@ canvas {
   font-size: clamp(18px, 4vw, 22px);
   margin-bottom: 28px;
   color: var(--fg);
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: -0.01em;
 }
 
@@ -691,7 +711,7 @@ canvas {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: clamp(15px, 3.5vw, 16px);
   color: var(--fg);
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: -0.01em;
 }
 
@@ -699,7 +719,7 @@ canvas {
   margin: 0;
   color: var(--accent);
   font-size: clamp(12px, 3vw, 13px);
-  font-weight: 600;
+  font-weight: 200;
   letter-spacing: 0.05em;
 }
 
@@ -714,7 +734,7 @@ canvas {
   display: inline-block;
   color: var(--accent);
   font-size: clamp(12px, 3vw, 13px);
-  font-weight: 600;
+  font-weight: 200;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -781,9 +801,9 @@ canvas {
 .opportunity-type {
   display: inline-block;
   font-size: clamp(10px, 2.5vw, 11px);
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: 0.1em;
-  padding: 6px 10px;
+  padding: 0.5rem 1rem;
   border-radius: 0px;
   margin-bottom: 12px;
   text-transform: uppercase;
@@ -812,7 +832,7 @@ canvas {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: clamp(15px, 3.5vw, 16px);
   color: var(--fg);
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: -0.01em;
 }
 
@@ -824,16 +844,16 @@ canvas {
 }
 
 .btn-small {
-  padding: 8px 14px;
-  background: var(--accent);
-  color: var(--bg);
-  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--accent);
+  font-weight: 200;
   font-size: clamp(12px, 3vw, 13px);
   cursor: pointer;
   border: 1px solid var(--accent);
   font-family: "Inter", system-ui, sans-serif;
   transition: all 0.3s ease;
-  border-radius: 16px;
+  border-radius: 0px;
   display: inline-block;
   text-decoration: none;
 }
@@ -851,7 +871,7 @@ canvas {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: clamp(16px, 4vw, 18px);
   color: var(--fg);
-  font-weight: 700;
+  font-weight: 200;
 }
 
 .opportunity-full p {
@@ -874,7 +894,7 @@ canvas {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-size: clamp(16px, 4vw, 18px);
   color: var(--fg);
-  font-weight: 700;
+  font-weight: 200;
 }
 
 .mentorship-section p {
