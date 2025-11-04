@@ -279,7 +279,7 @@ header {
 
 .hero h1 span {
   display: inline;
-  color: var(--accent);
+  color: var(--muted);
 }
 
 .hero p {
