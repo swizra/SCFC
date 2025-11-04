@@ -26,8 +26,7 @@
             <path
               d="M 70 25 L 30 25 L 30 42 L 60 42 L 60 58 L 70 58 L 70 75 L 30 75 L 30 58 L 40 58 L 40 42 L 30 42"
               fill="none"
-              stroke="var(--accent)"
-              stroke-width="3"
+              stroke-width="2"
               stroke-linecap="square"
               stroke-linejoin="miter"
             />
@@ -36,15 +35,23 @@
         </a>
         <button class="burger" id="burger" aria-label="Menu">
           <div class="burger-line"></div>
-
           <div class="burger-line"></div>
         </button>
+
         <nav id="primary-nav" class="links" aria-label="Primary">
           <a href="#about">Students</a>
           <a href="#value">Companies</a>
           <a href="#team-spotlight">Team</a>
           <a href="#partners">Partners</a>
           <a href="#contact">Join Us</a>
+          <button
+            id="theme-toggle"
+            class="btn theme-btn"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-icon-sun">Light</span>
+            <span class="theme-icon-moon">Dark</span>
+          </button>
         </nav>
       </div>
     </header>
@@ -207,6 +214,58 @@
                 consulting firms and finance roles.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="alt-bg">
+        <div class="container">
+          <h2>Resources Library</h2>
+          <p class="lead">
+            Access frameworks, templates, and guides to accelerate your learning
+            in consulting and finance.
+          </p>
+          <div class="resources-grid">
+            <div class="resource-category">
+              <h3>Consulting Frameworks</h3>
+              <div class="resource-list">
+                <div class="resource-item">Porter's Five Forces Template</div>
+                <div class="resource-item">SWOT Analysis Guide</div>
+                <div class="resource-item">Value Chain Framework</div>
+                <div class="resource-item">Market Entry Strategy Template</div>
+              </div>
+            </div>
+            <div class="resource-category">
+              <h3>Financial Models</h3>
+              <div class="resource-list">
+                <div class="resource-item">DCF Valuation Model</div>
+                <div class="resource-item">LBO Analysis Template</div>
+                <div class="resource-item">Comparable Company Analysis</div>
+                <div class="resource-item">Three Statement Model</div>
+              </div>
+            </div>
+            <div class="resource-category">
+              <h3>Case Prep</h3>
+              <div class="resource-list">
+                <div class="resource-item">Case Interview Framework Guide</div>
+                <div class="resource-item">Market Sizing Practice Cases</div>
+                <div class="resource-item">
+                  Business Case Studies Collection
+                </div>
+                <div class="resource-item">Presentation Skills Guide</div>
+              </div>
+            </div>
+          </div>
+          <div class="resource-cta">
+            <p>
+              Members get full access to our resource library with 50+ templates
+              and guides.
+            </p>
+            <a
+              href="mailto:hello@soyth.ch?subject=Resources%20Access"
+              class="btn"
+              >Request Access</a
+            >
           </div>
         </div>
       </section>
