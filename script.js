@@ -1,5 +1,7 @@
+// ====== Footer Year ======
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// ====== Burger Menu ======
 const burger = document.getElementById("burger");
 const nav = document.getElementById("primary-nav");
 
@@ -33,6 +35,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// ====== Crypto Market Data ======
 const cryptoIds = ["bitcoin", "ethereum", "cardano"];
 let chartInstance = null;
 
@@ -76,9 +79,9 @@ function displayMarketData(data) {
           <div class="price">$${price.toLocaleString("en-US", {
             maximumFractionDigits: 2,
           })}</div>
-          <div class="change" style="color: ${changeColor};">${
-      change >= 0 ? "+" : ""
-    }${change.toFixed(2)}%</div>
+          <div class="change" style="color: ${changeColor};">
+            ${change >= 0 ? "+" : ""}${change.toFixed(2)}%
+          </div>
         </div>
       </div>
     `;
@@ -88,3 +91,50 @@ function displayMarketData(data) {
 
 fetchMarketData();
 setInterval(fetchMarketData, 30000);
+
+// ====== THEME TOGGLE ======
+const themeToggleBtn = document.getElementById("theme-toggle");
+const root = document.documentElement;
+
+// Load saved theme (if user toggled manually before)
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  root.classList.add("dark-theme");
+} else if (savedTheme === "light") {
+  root.classList.add("light-theme");
+}
+
+function updateThemeIcons() {
+  const isDark = root.classList.contains("dark-theme");
+  const sunIcon = themeToggleBtn.querySelector(".theme-icon-sun");
+  const moonIcon = themeToggleBtn.querySelector(".theme-icon-moon");
+
+  // Animate icon transitions
+  if (isDark) {
+    sunIcon.style.opacity = "0";
+    sunIcon.style.transform = "translateY(-10px)";
+    moonIcon.style.opacity = "1";
+    moonIcon.style.transform = "translate(-50%, -50%) translateY(0)";
+  } else {
+    sunIcon.style.opacity = "1";
+    sunIcon.style.transform = "translateY(0)";
+    moonIcon.style.opacity = "0";
+    moonIcon.style.transform = "translate(-50%, -50%) translateY(10px)";
+  }
+}
+
+updateThemeIcons();
+
+themeToggleBtn.addEventListener("click", () => {
+  const isDark = root.classList.toggle("dark-theme");
+
+  if (isDark) {
+    root.classList.remove("light-theme");
+    localStorage.setItem("theme", "dark");
+  } else {
+    root.classList.add("light-theme");
+    localStorage.setItem("theme", "light");
+  }
+
+  updateThemeIcons();
+});
