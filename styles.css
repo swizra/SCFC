@@ -172,7 +172,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   max-width: fit-content;
   background: var(--accent);
   color: var(--bg);
@@ -182,7 +182,7 @@ header {
   border: 0px solid var(--accent);
   font-family: "Inter", system-ui, sans-serif;
   transition: all 0.3s ease;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .btn.secondary {
@@ -368,7 +368,7 @@ section p.lead {
   padding: clamp(24px, 4vw, 32px);
   position: relative;
   transition: all 0.3s ease;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .card h3 {
@@ -402,7 +402,7 @@ section p.lead {
   text-align: center;
   position: relative;
   transition: all 0.3s ease;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .stat .number {
@@ -436,7 +436,7 @@ section p.lead {
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .market-item .left {
@@ -728,7 +728,7 @@ canvas {
   padding: clamp(24px, 4vw, 32px);
   transition: all 0.3s ease;
   position: relative;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .team-header {
@@ -791,7 +791,7 @@ canvas {
   border: 0px solid var(--border-secondary);
   padding: clamp(24px, 4vw, 32px);
   transition: all 0.3s ease;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .team-card-full p {
@@ -826,7 +826,7 @@ canvas {
   padding: clamp(24px, 4vw, 32px);
   transition: all 0.3s ease;
   position: relative;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .opportunity-type {
@@ -835,7 +835,7 @@ canvas {
   font-weight: 200;
   letter-spacing: 0.1em;
   padding: 0.5rem 1rem;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
   margin-bottom: 12px;
   text-transform: uppercase;
 }
@@ -875,7 +875,7 @@ canvas {
 }
 
 .btn-small {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   background: transparent;
   color: var(--accent);
   font-weight: 200;
@@ -884,7 +884,7 @@ canvas {
   border: 1px solid var(--accent);
   font-family: "Inter", system-ui, sans-serif;
   transition: all 0.3s ease;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
   display: inline-block;
   text-decoration: none;
 }
@@ -895,7 +895,7 @@ canvas {
   padding: clamp(24px, 4vw, 32px);
   margin-top: 28px;
   text-align: left;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .opportunity-full h3 {
@@ -919,7 +919,7 @@ canvas {
   padding: clamp(24px, 4vw, 32px);
   margin-top: 40px;
   text-align: left;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .mentorship-section h3 {
@@ -960,7 +960,7 @@ canvas {
   background: var(--bg);
   border: 0px solid var(--border-secondary);
   padding: clamp(24px, 4vw, 32px);
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .resource-category h3 {
@@ -985,7 +985,7 @@ canvas {
   font-size: clamp(13px, 3vw, 14px);
   font-weight: 200;
   transition: all 0.2s ease;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .resource-cta {
@@ -994,7 +994,7 @@ canvas {
   padding: clamp(24px, 4vw, 32px);
   margin-top: 32px;
   text-align: left;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .resource-cta p {
@@ -1005,11 +1005,11 @@ canvas {
 }
 
 .theme-btn {
-  padding: 0.5rem 0.8rem;
+  padding: 0.5rem 1.5rem;
   font-size: clamp(12px, 2.5vw, 13px);
   position: relative;
   overflow: hidden;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 20px;
 }
 
 .theme-icon-sun,
